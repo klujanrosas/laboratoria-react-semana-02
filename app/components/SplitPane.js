@@ -1,4 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
+import DebugComponent from './DebugComponent'
 
 const SplitPane = ({ left, right }) => {
   return (
@@ -16,4 +19,9 @@ const SplitPane = ({ left, right }) => {
   )
 }
 
-export default SplitPane
+SplitPane.propTypes = {
+  left: PropTypes.element.isRequired,
+  right: PropTypes.element.isRequired
+}
+
+export default DebugComponent(SplitPane)
