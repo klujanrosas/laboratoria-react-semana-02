@@ -4,9 +4,13 @@ import PropTypes from 'prop-types'
 
 import './styles/base.css'
 
+import ConBorde from './components/ConBorde'
+
 const App = ({ title, content }) => (
   <div className="title">
-    {title}: {content}
+    <ConBorde color="white">
+      {title}: {content}
+    </ConBorde>
   </div>
 )
 
