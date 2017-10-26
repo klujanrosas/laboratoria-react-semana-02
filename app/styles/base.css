@@ -16,12 +16,17 @@ body {
 .root {
   display: flex;
   height: 100vh;
+  width: 100vw;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
 
 .title {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
   font-size: 3em;
   font-family: 'Arial', sans-serif;
   color: white;

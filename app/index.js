@@ -5,24 +5,40 @@ import PropTypes from 'prop-types'
 import './styles/base.css'
 
 import ConBorde from './components/ConBorde'
+import SplitPane from './components/SplitPane'
 
-const App = ({ title, content }) => (
+const Left = ({ title, content }) => (
+  <ConBorde color="green">
+    {title}: {content}
+  </ConBorde>
+)
+
+const Right = ({ title, content }) => (
+  <ConBorde color="blue">
+    {title}: {content}
+  </ConBorde>
+)
+
+const App = () => (
   <div className="title">
-    <ConBorde color="white">
-      {title}: {content}
-    </ConBorde>
+    <SplitPane
+      left={<Left title="Componente" content="Izquierda" />}
+      right={<Right title="Componente" content="Derecha" />}
+    />    
   </div>
 )
 
-App.propTypes = {
+Left.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+}
+
+Right.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired
 }
 
 render(
-  <App
-    title="EC React - Semana 2"
-    content="React Components"
-  />,
+  <App />,
   document.getElementById('root')
 )
