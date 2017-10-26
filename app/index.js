@@ -8,13 +8,13 @@ import ConBorde from './components/ConBorde'
 import SplitPane from './components/SplitPane'
 
 const Left = ({ title, content }) => (
-  <ConBorde color="green">
+  <ConBorde color="#528652">
     {title}: {content}
   </ConBorde>
 )
 
 const Right = ({ title, content }) => (
-  <ConBorde color="blue">
+  <ConBorde color="#b4b4fb">
     {title}: {content}
   </ConBorde>
 )
