@@ -3,9 +3,16 @@ import { render } from 'react-dom'
 
 import './styles/base.css'
 
+import SplitPane from './components/SplitPane'
+import Content from './components/Content'
+
+
 const App = () => (
   <div className="title">
-    EC React - Semana 2: React Components
+    <SplitPane
+      left={<Content color="red" text="Componente Izquierda" />}
+      right={<Content color="green" text="Componente Derecha" />}
+    />
   </div>
 )
 
