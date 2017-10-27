@@ -49,5 +49,11 @@ module.exports = {
     new OpenBrowserWebpackPlugin({
       url: 'http://localhost:8080'
     })
-  ]
+  ],
+  resolve: {
+    extensions: [
+      '.js',
+      '.jsx'
+    ]
+  }
 }
